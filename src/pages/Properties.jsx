@@ -24,6 +24,7 @@ import PropertyForm from "../components/PropertyForm";
 import ImageUploader from "../components/ImageUploader";
 import LeaseForm from "../components/LeaseForm";
 import Modal from "../components/Modal";
+import { SkeletonCard } from "../components/Skeleton";
 
 export default function Properties() {
   const { user } = useAuth();
@@ -125,7 +126,6 @@ export default function Properties() {
   };
 
   const handleLeaseSubmit = async (formData) => {
-    console.log("Submitting lease form data:", formData);
     setLeaseSubmitting(true);
     try {
       if (existingLease) {
@@ -236,7 +236,11 @@ export default function Properties() {
       </div>
 
       {loading ? (
-        <p className="text-slate-light text-sm">Loading properties...</p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {[...Array(3)].map((_, i) => (
+            <SkeletonCard key={i} />
+          ))}
+        </div>
       ) : filteredProperties.length === 0 ? (
         <div className="text-center py-16 border border-dashed border-border rounded-lg">
           <p className="text-slate-light">No properties yet. Add your first one to get started.</p>

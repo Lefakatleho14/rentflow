@@ -5,6 +5,7 @@ import Properties from "../pages/Properties";
 import Payments from "../pages/Payments";
 import Maintenance from "../pages/Maintenance";
 import Profile from "../pages/Profile";
+import Unauthorized from "../pages/Unauthorized";
 import NotFound from "../pages/NotFound";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
@@ -24,6 +25,7 @@ const router = createBrowserRouter([
       { path: "payments", element: <Payments /> },
       { path: "maintenance", element: <Maintenance /> },
       { path: "profile", element: <Profile /> },
+      { path: "unauthorized", element: <Unauthorized /> },
       { path: "*", element: <NotFound /> },
     ],
   },
