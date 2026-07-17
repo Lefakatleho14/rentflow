@@ -9,6 +9,7 @@ import {
 import { supabase } from "../lib/supabase";
 import { useProfile } from "../hooks/useProfile";
 import toast from "react-hot-toast";
+import NotificationBell from "./NotificationBell";
 
 const navItems = [
   { to: "/", label: "Dashboard", icon: HomeIcon },
@@ -29,8 +30,9 @@ export default function Sidebar() {
 
   return (
     <aside className="w-60 shrink-0 border-r border-border bg-card flex flex-col">
-      <div className="px-6 py-5 border-b border-border">
+      <div className="px-6 py-5 border-b border-border flex items-center justify-between">
         <h1 className="text-xl font-serif font-semibold text-emerald">RentFlow</h1>
+        <NotificationBell />
       </div>
 
       <nav className="p-3 space-y-1 flex-1">
