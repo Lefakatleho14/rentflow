@@ -1,4 +1,4 @@
-import { NavLink, useNavigate } from "react-router-dom";
+import { NavLink, Link, useNavigate } from "react-router-dom";
 import {
   HomeIcon,
   BuildingOffice2Icon,
@@ -57,12 +57,15 @@ export default function Sidebar() {
 
       <div className="border-t border-border p-3">
         {profile && (
-          <div className="px-3 py-2 mb-1">
+          <Link
+            to="/profile"
+            className="block px-3 py-2 mb-1 rounded-md hover:bg-surface transition-colors"
+          >
             <p className="text-sm font-medium text-slate-900 truncate">
               {profile.full_name || "Unnamed user"}
             </p>
             <p className="text-xs text-slate-light capitalize">{profile.role}</p>
-          </div>
+          </Link>
         )}
         <button
           onClick={handleLogout}

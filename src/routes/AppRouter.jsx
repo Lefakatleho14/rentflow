@@ -4,6 +4,7 @@ import Dashboard from "../pages/Dashboard";
 import Properties from "../pages/Properties";
 import Payments from "../pages/Payments";
 import Maintenance from "../pages/Maintenance";
+import Profile from "../pages/Profile";
 import NotFound from "../pages/NotFound";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
@@ -22,6 +23,7 @@ const router = createBrowserRouter([
       { path: "properties", element: <Properties /> },
       { path: "payments", element: <Payments /> },
       { path: "maintenance", element: <Maintenance /> },
+      { path: "profile", element: <Profile /> },
       { path: "*", element: <NotFound /> },
     ],
   },
