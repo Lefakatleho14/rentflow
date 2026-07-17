@@ -1,17 +1,17 @@
 # RentFlow
 
-A property and rental management platform for landlords, property managers, and tenants — track properties, leases, payments, and maintenance requests from one place.
+A property and rental management platform for landlords, property managers, and tenants - track properties, leases, payments, and maintenance requests from one place.
 
 ## Features
 
-- **Authentication** — email/password signup and login with role-based access (landlord/tenant)
-- **Property management** — full CRUD with image galleries, search, filtering, sorting, and pagination
-- **Tenant management** — invite-by-email leasing with automatic account linking on registration
-- **Payments** — record, confirm, and track rent payments; tenants can upload proof of payment
-- **Maintenance requests** — tenants submit issues with photos; landlords assign, update, and resolve
-- **Dashboard** — role-aware overview with income charts, occupancy stats, and lease expiry alerts
-- **Real-time notifications** — live in-app alerts for new requests, status changes, and payment confirmations
-- **Profile management** — editable details, avatar upload, password change
+- **Authentication** - email/password signup and login with role-based access (landlord/tenant)
+- **Property management** - full CRUD with image galleries, search, filtering, sorting, and pagination
+- **Tenant management** - invite-by-email leasing with automatic account linking on registration
+- **Payments** - record, confirm, and track rent payments; tenants can upload proof of payment
+- **Maintenance requests** - tenants submit issues with photos; landlords assign, update, and resolve
+- **Dashboard** - role-aware overview with income charts, occupancy stats, and lease expiry alerts
+- **Real-time notifications** - live in-app alerts for new requests, status changes, and payment confirmations
+- **Profile management** - editable details, avatar upload, password change
 
 ## Tech stack
 
@@ -59,7 +59,7 @@ VITE_SUPABASE_PUBLISHABLE_KEY=your-publishable-key
 alter publication supabase_realtime add table notifications;
 ```
 
-7. Ensure `authenticated` role grants are applied to every table (select/insert/update/delete as appropriate) — Supabase does not auto-expose new tables when "Automatically expose new tables" is disabled at project creation.
+7. Ensure `authenticated` role grants are applied to every table (select/insert/update/delete as appropriate) - Supabase does not auto-expose new tables when "Automatically expose new tables" is disabled at project creation.
 
 ### Running locally
 
@@ -95,7 +95,7 @@ src/
 
 Frontend is deployed to [Vercel](https://vercel.com). Add the same environment variables from `.env` in your Vercel project settings before deploying.
 
-Deployment link - rentflow-app-sepia.vercel.app
+Deployment link - https://rentflow-app-sepia.vercel.app/login
 
 ## Future improvements
 
