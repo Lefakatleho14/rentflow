@@ -95,6 +95,8 @@ src/
 
 Frontend is deployed to [Vercel](https://vercel.com). Add the same environment variables from `.env` in your Vercel project settings before deploying.
 
+Deployment link - rentflow-app-sepia.vercel.app
+
 ## Future improvements
 
 - Scheduled lease-expiry notifications (requires a scheduled job, e.g. `pg_cron` or a Supabase Edge Function)
