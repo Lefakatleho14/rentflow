@@ -59,7 +59,12 @@ export default function NotificationBell() {
       );
     }
     setIsOpen(false);
-    if (notification.link) navigate(notification.link);
+    if (notification.link) {
+      const target = notification.link.startsWith("/app")
+        ? notification.link
+        : `/app${notification.link}`;
+      navigate(target);
+    }
   };
 
   const handleMarkAllRead = async () => {

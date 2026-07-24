@@ -32,7 +32,7 @@ export default function Login() {
     }
 
     toast.success("Welcome back.");
-    navigate("/");
+    navigate("/app");
   };
 
   return (

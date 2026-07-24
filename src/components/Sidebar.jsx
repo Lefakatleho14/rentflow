@@ -12,10 +12,10 @@ import toast from "react-hot-toast";
 import NotificationBell from "./NotificationBell";
 
 const navItems = [
-  { to: "/", label: "Dashboard", icon: HomeIcon },
-  { to: "/properties", label: "Properties", icon: BuildingOffice2Icon },
-  { to: "/payments", label: "Payments", icon: BanknotesIcon },
-  { to: "/maintenance", label: "Maintenance", icon: WrenchScrewdriverIcon },
+  { to: "/app", label: "Dashboard", icon: HomeIcon },
+  { to: "/app/properties", label: "Properties", icon: BuildingOffice2Icon },
+  { to: "/app/payments", label: "Payments", icon: BanknotesIcon },
+  { to: "/app/maintenance", label: "Maintenance", icon: WrenchScrewdriverIcon },
 ];
 
 export default function Sidebar() {
@@ -40,7 +40,7 @@ export default function Sidebar() {
           <NavLink
             key={to}
             to={to}
-            end={to === "/"}
+            end={to === "/app"}
             className={({ isActive }) =>
               `flex items-center gap-3 px-3 py-2 rounded-md text-sm font-medium transition-colors ${
                 isActive
@@ -58,7 +58,7 @@ export default function Sidebar() {
       <div className="border-t border-border p-3">
         {profile && (
           <Link
-            to="/profile"
+            to="/app/profile"
             className="block px-3 py-2 mb-1 rounded-md hover:bg-surface transition-colors"
           >
             <p className="text-sm font-medium text-slate-900 truncate">
